@@ -1,3 +1,5 @@
+import {resolve} from 'path';
+
 module.exports = {
   /*
   ** Headers of the page
@@ -13,6 +15,13 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  plugins: [
+	{ src: '~/plugins/api-plugin.js' },
+	{ src: '~/plugins/vuekit.js' },
+],
+	modules: [
+		['vue-yandex-maps/nuxt']
+	],
   /*
   ** Customize the progress bar color
   */
@@ -33,7 +42,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+	}
   }
 }
 
